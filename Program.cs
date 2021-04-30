@@ -11,6 +11,7 @@ namespace Collection
         static void Main(string[] args)
         {
             Implement_List();
+            Implement_Stack();
         }
 
         private static void Implement_List()
@@ -28,6 +29,23 @@ namespace Collection
             {
                 Console.WriteLine(element);
             }
+        }
+        private static void Implement_Stack()
+        {
+            Console.WriteLine("\nImplementing Stack in DS");
+            Stack<string> stack = new Stack<string>();
+            stack.Push("Ayush");
+            stack.Push("Garvit");
+            stack.Push("Amit");
+            stack.Push("Ashish");
+            stack.Push("Garima");
+            string pop = stack.Pop();
+            //Iterate stack elements
+            foreach(var element in stack)
+            {
+                Console.WriteLine(element);
+            }
+            Console.WriteLine(("popped element: "+pop));
         }
     }
 }
