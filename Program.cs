@@ -13,6 +13,7 @@ namespace Collection
             Implement_List();
             Implement_Stack();
             Implement_Queue();
+            Implement_Set();
             Console.ReadKey();
         }
 
@@ -72,6 +73,21 @@ namespace Collection
             {
                 Console.WriteLine(enumerator.Current);
             }
+        }
+        private static void Implement_Set()
+        {
+            Console.WriteLine("\nImplementing Set in DS");
+            var set = new HashSet<string>();
+            set.Add("Sailesh");
+            set.Add("Vijay");
+            set.Add("Vinay");
+            set.Add("Vinod");
+            HashSet<string>.Enumerator enumerator = set.GetEnumerator();
+            while (enumerator.MoveNext())
+            {
+                Console.WriteLine("HashSet Values "+enumerator.Current);
+            }
+
         }
 
     }
