@@ -14,6 +14,7 @@ namespace Collection
             Implement_Stack();
             Implement_Queue();
             Implement_Set();
+            Implement_Dictionary();
             Console.ReadKey();
         }
 
@@ -87,7 +88,21 @@ namespace Collection
             {
                 Console.WriteLine("HashSet Values "+enumerator.Current);
             }
-
+        }
+        private static void Implement_Dictionary()
+        {
+            Console.WriteLine("\n Implementing Dictionary");
+            IDictionary<int, string> keyValuePairs = new Dictionary<int,string>();
+            keyValuePairs.Add(1,"Sailesh");
+            keyValuePairs.Add(2, "Suraj");
+            keyValuePairs.Add(3, "Swapnil");
+            keyValuePairs.Add(4, "Sapna");
+            Console.WriteLine("Access value at key=2 "+keyValuePairs[2]);
+            Console.WriteLine("\nIterating through dictionary ");
+            foreach (var element in keyValuePairs)
+            {
+                Console.WriteLine("Keys = "+element.Key+"Values = "+element.Value);
+            }
         }
 
     }
