@@ -12,6 +12,8 @@ namespace Collection
         {
             Implement_List();
             Implement_Stack();
+            Implement_Queue();
+            Console.ReadKey();
         }
 
         private static void Implement_List()
@@ -47,5 +49,30 @@ namespace Collection
             }
             Console.WriteLine(("popped element: "+pop));
         }
+        private static void Implement_Queue()
+        {
+            Console.WriteLine("\nImplementing Queue in DS");
+            Queue<string> queue = new Queue<string>();
+            queue.Enqueue("Sailesh singh At First Head");
+            queue.Enqueue("Suraj kumar");
+            queue.Enqueue("Arun Patil");
+            queue.Enqueue("Sunder kumar");
+            Console.WriteLine("Head: "+queue.Peek());
+            //Iterating through queue elements
+            foreach (var element in queue)
+            {
+                Console.WriteLine("Queue element First in First out " + element);
+            }
+            string dequeuedElement = queue.Dequeue();
+            Console.WriteLine("Dequeued Element Should be Sailesh Singh "+dequeuedElement);
+            Console.WriteLine("\nIterarating the queue elements after dequeue one Element: ");
+            //Iteratring queue elements using Enumerator
+            Queue<string>.Enumerator enumerator = queue.GetEnumerator();
+            while (enumerator.MoveNext())
+            {
+                Console.WriteLine(enumerator.Current);
+            }
+        }
+
     }
 }
